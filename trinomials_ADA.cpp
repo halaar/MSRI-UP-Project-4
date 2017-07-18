@@ -7,7 +7,7 @@
 #include <algorithm>
 #include <string>
 #include <bitset>
-#include "boost/math/common_factor_rt.hpp"
+#include "common_factor_rt.hpp"
 
 #define debug(x) cerr << #x << " -> " << (x) << "\n"; 
 using namespace std;
@@ -152,9 +152,9 @@ void search(lint p, lint N) {
 
 int main(int argc, char** argv) {
   lint P, N;
-  if (argc >= 2) P = stoi(argv[1]);
+  if (argc >= 2) P = std::stoi(argv[1]);
   else P = 5;
-  if (argc == 3) N = stoi(argv[2]);
+  if (argc == 3) N = std::stoi(argv[2]);
   else N = 1;
   
   ofstream ofs("threads used.txt", fstream::trunc);
